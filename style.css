@@ -2,12 +2,10 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: "Montserrat", sans-serif;
   color: #515076;
 }
-
 
 h1 {
   text-align: center;
@@ -17,15 +15,13 @@ h1 {
   line-height: 78px;
 }
 
-
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 34px;
+  gap: 45px;
   list-style: none;
   padding: 0;
 }
-
 
 .product-card {  
   width: 340px;
@@ -35,19 +31,15 @@ h1 {
 
 }
 
-
 .label-text {
-  width: 400px;
   font-size: 10px;
   color: #A5A3B9;
   text-transform: uppercase;
 }
 
-
 .img-card {
   width: 290px;
 }
-
 
 .product-name {
   font-size: 18px;
@@ -55,13 +47,11 @@ h1 {
   font-weight: 700;
 }
 
-
 .main-text {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
 }
-
 
 .price  {
   display: flex;
@@ -69,7 +59,6 @@ h1 {
   margin-top: 30px;
   font-size: 20px;
 }
-
 
 .price .value {
   font-weight: 700;
