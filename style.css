@@ -5,6 +5,11 @@
 body {
   font-family: "Montserrat", sans-serif;
   color: #515076;
+  margin: 0;
+  padding-top: 160px;
+  background-image: url("assets/images/dandelions-background.png");
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -19,8 +24,11 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 45px;
+  justify-content: center;
   list-style: none;
   padding: 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .product-card {  
@@ -61,5 +69,5 @@ h1 {
 }
 
 .price .value {
-  font-weight: 700;
+  font-weight: 400;
 }
