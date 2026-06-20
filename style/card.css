@@ -3,6 +3,12 @@
   padding: 24px;
   width: 100%;
   box-shadow: 2px 2px 8px #5150761A;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 12px #51507633;
 }
 
 .card__image {
@@ -32,8 +38,29 @@
   justify-content: space-between;
   margin-top: 30px;
   font-size: 20px;
+  padding-bottom: 20px;
 }
 
 .card__price .value {
   font-weight: 600;
+}
+
+.card__button {
+  font: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #515076;
+  padding: 10px;
+  border: solid 1px #515076;
+  border-radius: 8px;
+  background-color: transparent;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card__button:hover {
+  background-color: #515076;
+  color: #fff;
+  transform: translateY(-2px);
 }
