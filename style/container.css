@@ -1,0 +1,8 @@
+.container {
+  padding-top: 160px;
+  margin: 0;
+  background-image: url("../assets/images/dandelions-background.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 48px 0px;
+}
