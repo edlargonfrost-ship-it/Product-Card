@@ -1,20 +1,20 @@
-function getTemp() {
-  let city = 'кувейт'
-  let temp = '40' 
+function getTemp(city, temp) { 
   console.log(`сейчас в городе ${city} температура ${temp} градусов по цельсию`)
 }
 
-getTemp ();
+getTemp ('кувейт', 40);
 
-function getSpeed () {
-  const speedOfLight = 299792458
-  let speed = 299792459
-  if (speedOfLight < speed) {
+
+const speedOfLight = 299792458
+
+function getSpeed (speed) {
+  if (speed > speedOfLight) {
     console.log('сверхсветовая скорость')
   }
 }
 
-getSpeed ();
+getSpeed (299792459);
+
 
 function buyProduct(product, price, budget) {
   if (budget >= price) {
@@ -26,10 +26,14 @@ function buyProduct(product, price, budget) {
 
 buyProduct("HyperX cloud 2 wireless", 15000, 20000);
 
-let programming = "реально крутая вещь"
-console.log(`javascript это ${programming}`);
+
+function showFact (programming) {
+  console.log(`javascript это ${programming}`);
+}
+
+showFact ("реально крутая вещь");
 
 
 const lost = 4815162342
 let char = "ghost rider"
-var name = "rerur"
+var userName = "rerur"
