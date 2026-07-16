@@ -31,7 +31,6 @@ console.log(productsCard);
 
 const pageTitle = document.querySelector('.title');
 pageTitle.addEventListener('mouseover', function () {
-  pageTitle.textContent = 'Вы навели мышку на заголовок';
   console.log(event.target.textContent);
 })
 
