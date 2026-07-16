@@ -5,11 +5,15 @@ function getTemp(city, temp) {
 getTemp ('кувейт', 40);
 
 
-const speedOfLight = 299792458
+const SPEED_OF_LIGHT = 299792458
 
 function getSpeed (speed) {
-  if (speed > speedOfLight) {
+  if (speed > SPEED_OF_LIGHT) {
     console.log('сверхсветовая скорость')
+  } else if (speed === SPEED_OF_LIGHT) {
+    console.log("скорость света")
+  } else if (SPEED_OF_LIGHT > speed) {
+    console.log("субсветовая скорость")
   }
 }
 
