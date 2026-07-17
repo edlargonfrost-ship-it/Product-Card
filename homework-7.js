@@ -1,9 +1,8 @@
 function getTemp(city, temp) { 
-  console.log(`сейчас в городе ${city} температура ${temp} градусов по цельсию`)
+  console.log(`сейчас в ${city} температура - ${temp} градусов по цельсию`)
 }
 
-getTemp ('кувейт', 40);
-
+getTemp ('X', 'Y');
 
 const SPEED_OF_LIGHT = 299792458
 
@@ -19,8 +18,9 @@ function getSpeed (speed) {
 
 getSpeed (299792459);
 
-
-function buyProduct(product, price, budget) {
+function buyProduct(budget) {
+  let price = 15000
+  let product = "HyperX cloud 2 wireless"
   if (budget >= price) {
     console.log(`${product} приобретён. Спасибо за покупку!`)
   } else {
@@ -28,15 +28,13 @@ function buyProduct(product, price, budget) {
   }
 }
 
-buyProduct("HyperX cloud 2 wireless", 15000, 20000);
-
+buyProduct(20000);
 
 function showFact (programming) {
   console.log(`javascript это ${programming}`);
 }
 
 showFact ("реально крутая вещь");
-
 
 const lost = 4815162342
 let char = "ghost rider"
