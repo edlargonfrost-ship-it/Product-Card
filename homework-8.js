@@ -142,7 +142,7 @@ const mainLibrary = [
 
 console.log(mainLibrary)
 
-const getRareBook = mainLibrary.map(function(book) {
+const isRare = mainLibrary.map(function(book) {
   if (book.year > 2000) {
     return true
   } else {
@@ -150,4 +150,4 @@ const getRareBook = mainLibrary.map(function(book) {
   }
 })
 
-console.log(getRareBook)
+console.log(isRare)
