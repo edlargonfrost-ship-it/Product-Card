@@ -27,8 +27,6 @@ function addMaxSpeed (carSpecs) {
 addMaxSpeed (carSpecs)
 console.log (carSpecs)
 
-carSpecs.owner = user
-
 function CheckMark (object, key) {
   console.log(object[key])
 }
