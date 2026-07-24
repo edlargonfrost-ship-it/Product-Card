@@ -8,7 +8,7 @@ const user = {
   city: "Ufa",
   relationship: "single",
   phone: "+9659809599"
-}
+};
 
 const carSpecs = {
   mark: "toyota",
@@ -16,22 +16,24 @@ const carSpecs = {
   year: "2026",
   color: "white",
   transmition: "CVT",
-}
+};
 
-carSpecs.owner = user
+carSpecs.owner = user;
 
 function addMaxSpeed (carSpecs) {
-  carSpecs.maxSpeed??= 180
+  if (!Object.hasOwn(carSpecs, "maxSpeed")){
+    carSpecs.maxSpeed = 180
+  }
 }
 
-addMaxSpeed (carSpecs)
-console.log (carSpecs)
+addMaxSpeed(carSpecs);
+console.log(carSpecs);
 
-function CheckMark (object, key) {
+function checkMark(object, key) {
   console.log(object[key])
 }
 
-CheckMark(carSpecs, "mark")
+checkMark(carSpecs, "mark");
 
 const theWitcher = {
   name: "The Witcher",
@@ -39,23 +41,23 @@ const theWitcher = {
   year: 1986,
   color: "colored",
   genre: "dark fantasy"
-}
+};
 
-const LOTR = {
+const lotr = {
   name: "The lord of the rings",
   Author: "John Ronald Reuel Tolkien",
   year: 1954,
   color: "black",
   genre: "fantasy"
-}
+};
 
-const Eragon = {
+const eragon = {
   name: "eragon",
   Author: "kristopher paolini",
   year: 2003,
   color: "sapphire",
   genre: "fantasy"
-}
+};
 
 const dune = {
   name: "Dune",
@@ -63,18 +65,17 @@ const dune = {
   year: 1965,
   color: "brown",
   genre: "science fiction"
-}
+};
 
 const library = [ 
   theWitcher,
-  LOTR,
-  Eragon
-]
+  lotr,
+  eragon
+];
 
-library.push(dune)
+library.push(dune);
 
-console.log(library)
-
+console.log(library);
 
 const witcherBooks = [
   {
@@ -133,21 +134,20 @@ const witcherBooks = [
     genre: "dark fantasy",
     type: "роман-приквел"
   }
-]
+];
 
 const mainLibrary = [
   ...library,
   ...witcherBooks
-]
+];
 
-console.log(mainLibrary)
+console.log(mainLibrary);
 
-const isRare = mainLibrary.map(function(book) {
-  if (book.year > 2000) {
-    return true
-  } else {
-    return false
-  }
-})
+const wichBookIsRare = mainLibrary.map(function(book){
+  return {
+    ...book,
+    isRare: book.year > 2000
+  };
+});
 
-console.log(isRare)
+console.log(wichBookIsRare);
