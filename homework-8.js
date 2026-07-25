@@ -20,7 +20,7 @@ const carSpecs = {
 
 carSpecs.owner = user;
 
-function addMaxSpeed (carSpecs) {
+function addMaxSpeed(carSpecs) {
   if (!Object.hasOwn(carSpecs, "maxSpeed")){
     carSpecs.maxSpeed = 180
   }
@@ -143,11 +143,11 @@ const mainLibrary = [
 
 console.log(mainLibrary);
 
-const wichBookIsRare = mainLibrary.map(function(book){
+const bookWithIsRareProperty = mainLibrary.map(function(book){
   return {
     ...book,
     isRare: book.year > 2000
   };
 });
 
-console.log(wichBookIsRare);
+console.log(bookWithIsRareProperty);
