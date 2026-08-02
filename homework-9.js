@@ -6,7 +6,7 @@ const numbers = [
 
 console.log(numbers);
 
-const slicedNumbers = numbers.slice(4, 10);
+const slicedNumbers = numbers.filter((num, index) => index >= 4 && index < 10);
 console.log(slicedNumbers);
 
 const jungleHeroes = [
@@ -29,13 +29,10 @@ const commentsWithComEmails = comments.filter(comment => {
 console.log(commentsWithComEmails);
 
 const updatedComments = comments.map(comment => {
-  if (comment.id <= 5) {
-    comment.postId = 2;
-  } else {
-    comment.postId = 1;
-  }
-
-  return comment;
+return {
+  ...comment,
+  postId: comment.id <= 5 ? 2 : 1
+}
 });
 
 console.log(updatedComments);
@@ -50,7 +47,10 @@ const commentsIdAndName = comments.map(comment => {
 console.log(commentsIdAndName);
 
 const longCommentsStatus = comments.map(comment => {
-  return comment.body.length > 180;
+  return {
+    ...comment,
+    isInvalid: comment.body.length > 180
+  };
 });
 
 console.log(longCommentsStatus);
@@ -66,7 +66,4 @@ const mailsArray2 = comments.map(comment => comment.email);
 
 console.log(mailsArray2);
 
-const commentsStr = comments
-  .map(comment => comment.name)
-
-console.log(commentsStr.join());
+console.log(mailsArray2.join());
