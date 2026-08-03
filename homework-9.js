@@ -6,7 +6,7 @@ const numbers = [
 
 console.log(numbers);
 
-const slicedNumbers = numbers.filter((num, index) => index >= 4 && index < 10);
+const slicedNumbers = numbers.filter (number => number >= 5)
 console.log(slicedNumbers);
 
 const jungleHeroes = [
