@@ -25,12 +25,12 @@ cards.forEach(card => {
   console.log(card.compound);
 });
 
+const result = cards.reduce((object, card) => {
+  object[card.name] = card.description;
+  return object;
+}, {});
+
+console.log(result)
 
 const howManyCardsShow = prompt("сколько карточек отобразить?")
 console.log(howManyCardsShow)
-
-function card(array){
-  
-}
-
-card(cards)

@@ -18,6 +18,15 @@ export const cards = [
   price: "3 500 ₽"
 },
 {
+  image: "assets/images/jar-face_wash.png",
+  alt: "гель для умывания лица",
+  category: "для нормальной кожи",
+  name: "Гель для умывания",
+  description: "Интенсивно очищает, не повреждает защитный барьер кожи.",
+  compound: ["минералы", "витамины С, A, PP, B и E", "солнцезащитные компоненты"],
+  price: "1 500 ₽"
+},
+{
   image:  "assets/images/jar-gift_packNo1.png",
   alt: "Подарочный набор №1",
   category: "для нормальной кожи",
@@ -34,14 +43,5 @@ export const cards = [
   description: "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.",
   compound: ["воски", "минералы", "масла"],
   price: "7 520 ₽"
-},
-{
-  image: "assets/images/jar-face_wash.png",
-  alt: "гель для умывания лица",
-  category: "для нормальной кожи",
-  name: "Гель для умывания",
-  description: "Интенсивно очищает, не повреждает защитный барьер кожи.",
-  compound: ["минералы", "витамины С, A, PP, B и E", "солнцезащитные компоненты"],
-  price: "1 500 ₽"
 }
 ];
