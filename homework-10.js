@@ -7,7 +7,7 @@ const cardList = document.getElementById("card-list");
 function getCardsAmount(){
   const cardsToShow = Number(prompt("Сколько карточек отобразить? От 1 до 5"));
 
-  if(cardsToShow < 1 || cardsToShow > 5){
+  if(cardsToShow < 1 || cardsToShow > 5 || isNaN(cardsToShow)){
   return false;
 }
 
