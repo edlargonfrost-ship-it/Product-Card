@@ -19,8 +19,8 @@ console.log("Ввёл:", getCards);
 console.log("Всего карточек:", cards.length);
 console.log("Будет показано:", cards.slice(0, getCards).length);
 
-function renderCards(){
-  cards.slice(0, getCards).forEach(card => {
+function renderCards(cardsArray){
+  cardsArray.slice(0, getCards).forEach(card => {
   const cardFilling = cardTemplate.content.cloneNode(true);
 
   cardFilling.querySelector(".card__image").src = card.image;
@@ -42,7 +42,7 @@ function renderCards(){
 });
 };
 
-renderCards()
+renderCards(cards)
 
 const cardsArray = cards.reduce((array, card) =>{
   array.push({
