@@ -152,4 +152,3 @@ const bookWithIsRareProperty = mainLibrary.map(function(book){
 });
 
 console.log("!!!",bookWithIsRareProperty);
-

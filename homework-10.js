@@ -4,37 +4,37 @@ const cardTemplate = document.getElementById("card-template");
 const cardList = document.getElementById("card-list");
 
 
-function getCardsAmount(){
+function getCardsAmount() {
   const cardsToShow = Number(prompt("Сколько карточек отобразить? От 1 до 5"));
 
-  if(cardsToShow < 1 || cardsToShow > 5 || isNaN(cardsToShow)){
-  return false;
-}
+  if (cardsToShow < 1 || cardsToShow > 5 || isNaN(cardsToShow)) {
+    return false;
+  }
 
-return cardsToShow;
+  return cardsToShow;
 };
 
-function renderCards(cardsArray){
+function renderCards(cardsArray) {
   cardsArray.slice(0, getCards).forEach(card => {
-  const cardFilling = cardTemplate.content.cloneNode(true);
+    const cardFilling = cardTemplate.content.cloneNode(true);
 
-  cardFilling.querySelector(".card__image").src = card.image;
-  cardFilling.querySelector(".card__image").alt = card.alt;
-  cardFilling.querySelector(".card__category").textContent = card.category;
-  cardFilling.querySelector(".card__name").textContent = card.name;
-  cardFilling.querySelector(".card__description").textContent = card.description;
-  cardFilling.querySelector(".card__price-value").textContent = card.price;
+    cardFilling.querySelector(".card__image").src = card.image;
+    cardFilling.querySelector(".card__image").alt = card.alt;
+    cardFilling.querySelector(".card__category").textContent = card.category;
+    cardFilling.querySelector(".card__name").textContent = card.name;
+    cardFilling.querySelector(".card__description").textContent = card.description;
+    cardFilling.querySelector(".card__price-value").textContent = card.price;
 
-  const compoundList = cardFilling.querySelector(".compound__list");
+    const compoundList = cardFilling.querySelector(".compound__list");
 
-  card.compound.forEach(compound => {
-    const li = document.createElement("li");
-    li.textContent = compound;
-    compoundList.append(li);
+    card.compound.forEach(compound => {
+      const li = document.createElement("li");
+      li.textContent = compound;
+      compoundList.append(li);
+    });
+
+    cardList.appendChild(cardFilling);
   });
-
-  cardList.appendChild(cardFilling);
-});
 };
 
 let getCards = getCardsAmount();
@@ -46,7 +46,7 @@ while (getCards === false) {
 
 renderCards(cards);
 
-const cardsArray = cards.reduce((array, card) =>{
+const cardsArray = cards.reduce((array, card) => {
   array.push({
     name: card.name,
     description: card.description
