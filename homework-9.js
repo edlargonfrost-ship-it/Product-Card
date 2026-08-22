@@ -53,6 +53,7 @@ const longCommentsStatus = comments.map(comment => {
   };
 });
 
+
 console.log(longCommentsStatus);
 
 const mailsArray = comments.reduce((mails, comment) => {

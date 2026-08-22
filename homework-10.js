@@ -8,14 +8,14 @@ function getCardsAmount() {
   const cardsToShow = Number(prompt("Сколько карточек отобразить? От 1 до 5"));
 
   if (cardsToShow < 1 || cardsToShow > 5 || isNaN(cardsToShow)) {
-    return false;
+    return getCardsAmount();
   }
 
   return cardsToShow;
 };
 
 function renderCards(cardsArray) {
-  cardsArray.slice(0, getCards).forEach(card => {
+  cardsArray.slice(0, cardsAmount).forEach(card => {
     const cardFilling = cardTemplate.content.cloneNode(true);
 
     cardFilling.querySelector(".card__image").src = card.image;
@@ -37,19 +37,13 @@ function renderCards(cardsArray) {
   });
 };
 
-let getCards = getCardsAmount();
-
-while (getCards === false) {
-  alert("Неверное количество");
-  getCards = getCardsAmount();
-}
+let cardsAmount = getCardsAmount();
 
 renderCards(cards);
 
 const cardsArray = cards.reduce((array, card) => {
   array.push({
-    name: card.name,
-    description: card.description
+    [card.name] : card.description
   });
   return array
 }, []);
