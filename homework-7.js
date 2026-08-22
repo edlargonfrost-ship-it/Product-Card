@@ -6,7 +6,7 @@ getTemp ('X', 'Y');
 
 const SPEED_OF_LIGHT = 299792458
 
-function getSpeed (speed) {
+function getSpeed(speed) {
   if (speed > SPEED_OF_LIGHT) {
     console.log('сверхсветовая скорость')
   } else if (speed === SPEED_OF_LIGHT) {

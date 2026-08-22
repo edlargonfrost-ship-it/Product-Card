@@ -146,8 +146,9 @@ console.log(mainLibrary);
 const bookWithIsRareProperty = mainLibrary.map(function(book){
   return {
     ...book,
-    isRare: book.year > 2000
+    isRare: book.year > 2000,
+    forzaHorizon: "good game"
   };
 });
 
-console.log(bookWithIsRareProperty);
+console.log("!!!",bookWithIsRareProperty);
