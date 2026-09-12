@@ -1,0 +1,51 @@
+.modal{
+  display: none;
+  position: fixed;
+  inset: 0;
+  cursor: pointer;
+  padding: 30px;
+  overflow-y: auto;
+  z-index: 4;
+}
+
+.modal-showed {
+  position: relative;
+  max-width: 600px;
+  background-color: azure;
+  margin: auto;
+  color: black;
+  border-radius: 16px;
+  padding: 30px;
+  cursor: default;
+}
+
+.modal__title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.modal__exit {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.modal__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: 10px;
+}
+
+.modal__inputs input {
+  background-color: transparent;
+  border-radius: 5px;
+  height: 40px;
+  border: 1px solid;
+  padding: 15px;
+}
