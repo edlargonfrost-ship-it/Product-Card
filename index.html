@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premium Beauty Products</title>
+
+  <link rel="stylesheet" href="style/modal.css">
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/clear-list.css">
   <link rel="stylesheet" href="style/compound.css">
@@ -12,50 +14,127 @@
   <link rel="stylesheet" href="style/title.css">
   <link rel="stylesheet" href="style/card.css">
   <link rel="stylesheet" href="style/products.css">
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/overlay.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
 </head>
+
 <body>
+
+  <header>
+    <button class="login-button modal__login-button">войти</button>
+    <button class="registration-button modal__registration-button">регистрация</button>
+  </header>
+
+  <div class="modal modal_registration">
+    <div class="modal-showed">
+      <h2 class="modal__title">регистрация</h2>
+
+      <form class="modal__inputs">
+        <input type="text" name="name" placeholder="Введите Имя..." required>
+        <input type="text" name="surname" placeholder="Введите Фамилию..." required>
+        <input type="date" name="birth-date" placeholder="Введите дату рождения..." required>
+        <input type="text" name="login" placeholder="придумайте Логин..." required>
+        <input type="email" name="email" placeholder="Введите email..." required>
+        <input id="password" type="password" name="password" placeholder="введите пароль..." required>
+        <input id="second-password" type="password" name="password" placeholder="Введите Пароль ещё раз..." required>
+        <button type="submit">подтвердить</button>
+      </form>
+
+      <button class="modal__exit">&#10006</button>
+    </div>
+  </div>
+
+  <div class="modal modal_login">
+    <div class="modal-showed">
+      <h2 class="modal__title">вход</h2>
+
+      <form class="modal__inputs">
+        <input type="text" name="login" placeholder="Введите Логин..." required>
+        <input type="password" name="password" placeholder="Введите Пароль..." required>
+        <button class="validation-check" type="submit">подтвердить</button>
+      </form>
+
+      <button class="modal__exit">&#10006</button>
+    </div>
+  </div>
+
   <main class="main">
-<!--<button class="btn-toggle">Переключить цвет</button>
-    <button class="btn-message">Открыть сообщение</button>
-    <button class="btn-google">поискать в гугле</button>
-    <button id="repaint-card-button">Перекрасить карточки</button>-->
     <div class="container">
       <h1 class="title">Выбери свой продукт</h1>
-        <ul id="card-list" class="products clear-list"></ul>
+      <ul id="card-list" class="products clear-list"></ul>
 
-        <template id ="card-template">
-          <li class="products__item card">
-            <img src="" alt="" class="card__image">
-            <span class="card__category"></span>
-            <h2 class="card__name"></h2>
-            <p class="card__description"></p>
+      <template id="card-template">
+        <li class="products__item card">
+          <img src="" alt="" class="card__image">
+          <span class="card__category"></span>
+          <h2 class="card__name"></h2>
+          <p class="card__description"></p>
 
-            <div class="card__compound compound">
-              <span class="compound__name">Состав:</span>
-              <ul class="compound__list"></ul>
+          <div class="card__compound compound">
+            <span class="compound__name">Состав:</span>
+            <ul class="compound__list"></ul>
+          </div>
+
+          <div class="card__footer">
+            <div class="card__price">
+              <b>Цена</b>
+              <span class="card__price-value"></span>
             </div>
-
-            <div class="card__footer">
-              <div class="card__price">
-                <b>Цена</b>
-                <span class="card__price-value"></span>
-              </div>
-              <button class="card__button">купить</button>
-            </div>
-          </li> 
-        </template>
+            <button class="card__button">купить</button>
+          </div>
+        </li>
+      </template>
     </div>
   </main>
 
-  <script src="main.js"></script>
-  <script src="homework-7.js"></script>
-  <script src="homework-8.js"></script>
-  <script type="module" src="homework-9.js"></script>
-  <script type="module" src="homework-10.js"></script>
+  <footer class="footer">
+    <div class="footer__container">
+      <div>
+        <h2 class="footer__name">Product Cards</h2>
+        <p class="footer__description">У Нас Самые Лучшие Продукты Для Кожи!</p>
+        <a href="">
+          <img class="footer__img" src="assets\images\vk.png" alt="vk">
+        </a>
+        <a href="">
+          <img class="footer__img" src="assets\images\tg.png" alt="tg">
+        </a>
+      </div>
 
+        <form class="footer__form" id="footer__form">
+          <h2 class="form-title">подпишись на наши акции:</h2>
+          <div class="email-input" id="footer__form">
+            <input class="footer__email" type="email" name="email" placeholder="Введи Email..." required>
+            <img class="vertical-line" src="assets\images\vertical-line.png" alt="vertical-line">
+            <button class="email-input__button" type="submit">Подписаться</button>
+          </div>
+        </form>
+
+      <nav class="menu">
+        <h2 class="menu__title">быстрые ссылки</h2>
+        <ul class="menu__list">
+          <li><a class="menu__link" href="#">Главная</a></li>
+          <li><a class="menu__link" href="#">Магазин</a></li>
+          <li><a class="menu__link" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    <img class="horizontal-line" src="assets\images\horizontal-line.png" alt="horizontal-line">
+    <p class="site-name">www.product-cards.com © all rights reserved</p>
+  </footer>
+
+  <script src="script/main.js"></script>
+  <script src="script/homework-7.js"></script>
+  <script src="script/homework-8.js"></script>
+  <script type="module" src="script/homework-9.js"></script>
+  <script type="module" src="script/homework-10.js"></script>
+  <script type="module" src="script/homework-11.js"></script>
 </body>
+
 </html>

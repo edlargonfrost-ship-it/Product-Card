@@ -1,0 +1,14 @@
+.registration-button {
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.login-button {
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 18px;
+}

@@ -1,0 +1,99 @@
+.footer {
+  background-color: #3A3A3A;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 100px 40px 20px;
+}
+
+.footer__name {
+  font-size: 28px;
+  padding-bottom: 20px;
+  font-weight: 800;
+}
+
+.footer__description {
+  font-size: 18px;
+  padding-bottom: 40px;
+  font-weight: 400;
+}
+
+.footer__img {
+  padding-right: 30px;
+}
+
+.footer__container {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.footer__form {
+  margin: 0 auto;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.email-input {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding-left: 24px;
+}
+
+.vertical-line {
+  width: 2px;
+}
+
+.email-input__button {
+  margin: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  padding-right: 15px;
+}
+
+.menu {
+  margin-left: auto;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  align-items: flex-start;
+}
+
+.menu__title {
+  font-size: 24px;
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.menu__link {
+  color: #FFFFFF;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.horizontal-line {
+  display: block;
+  margin: 80px auto 50px;
+}
+
+.site-name {
+  text-align: center;
+  font-weight: 400;
+}
